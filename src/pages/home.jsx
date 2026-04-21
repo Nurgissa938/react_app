@@ -1,19 +1,18 @@
-import { useState } from 'react'
+import CarCard from '../components/CarCard'
+import { carsMock } from '../data/carsData'
+import './Home.css'
 
-function home() {
-    const [count, setCount] = useState(0)
-
+function Home() {
     return (
-        <div style={{ padding: '40px' }}>
+        <div className='home'>
             <h1>Главная страница</h1>
-
-            <p style={{ fontSize: '32px' }}>{count}</p>
-
-            <button onClick={() => setCount(count + 5)}>
-                +5
-            </button>
+            <div className='home-grid'>
+                {carsMock.map((car) => (
+                    <CarCard key={car.id} car={car} />
+                ))}
+            </div>
         </div>
     )
 }
 
-export default home
+export default Home
