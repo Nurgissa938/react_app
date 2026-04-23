@@ -1,3 +1,4 @@
+import { FUEL_TYPES, TRANSMISSION_TYPES } from "../constants/car.constants";
 export const carsMock = [
   {
     id: 1,
@@ -6,8 +7,8 @@ export const carsMock = [
     year: 2020,
     price: 14500000,
     mileage: 54000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 2,
@@ -16,8 +17,8 @@ export const carsMock = [
     year: 2021,
     price: 11200000,
     mileage: 31000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 3,
@@ -26,8 +27,8 @@ export const carsMock = [
     year: 2022,
     price: 13800000,
     mileage: 22000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 4,
@@ -36,8 +37,8 @@ export const carsMock = [
     year: 2019,
     price: 19800000,
     mileage: 67000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 5,
@@ -46,8 +47,8 @@ export const carsMock = [
     year: 2018,
     price: 21400000,
     mileage: 79000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 6,
@@ -56,8 +57,8 @@ export const carsMock = [
     year: 2020,
     price: 26500000,
     mileage: 48000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 7,
@@ -66,8 +67,8 @@ export const carsMock = [
     year: 2022,
     price: 22900000,
     mileage: 19000,
-    fuel: "Электро",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.ELECTRIC.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 8,
@@ -76,8 +77,8 @@ export const carsMock = [
     year: 2021,
     price: 24100000,
     mileage: 35000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 9,
@@ -86,8 +87,8 @@ export const carsMock = [
     year: 2017,
     price: 9800000,
     mileage: 102000,
-    fuel: "Дизель",
-    transmission: "Механика",
+    fuel: FUEL_TYPES.DIESEL.value,
+    transmission: TRANSMISSION_TYPES.MANUAL.value,
   },
   {
     id: 10,
@@ -96,8 +97,8 @@ export const carsMock = [
     year: 2019,
     price: 9300000,
     mileage: 88000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
   {
     id: 11,
@@ -106,7 +107,7 @@ export const carsMock = [
     year: 2022,
     price: 12200000,
     mileage: 31000,
-    fuel: "Бензин",
-    transmission: "Автомат",
+    fuel: FUEL_TYPES.PETROL.value,
+    transmission: TRANSMISSION_TYPES.AUTOMATIC.value,
   },
 ];
