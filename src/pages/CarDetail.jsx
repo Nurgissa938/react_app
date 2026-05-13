@@ -1,10 +1,26 @@
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { carsMock } from '../data/carsData'
 import { getFuelLabel, getTransmissionLabel } from "../constants/car.constants";
+import { getCarById } from '../api/cars_api';
+import AddToCartButton from '../components/AddToCartButton';
+import Loader from '../components/Loader';
 
 function CarDetail() {
-    const { id } = useParams()
-    const car = carsMock.find((c) => c.id === Number(id))
+    const { id } = useParams();
+    const [car, setCar] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        getCarById(id)
+            .then(setCar)
+            .catch((err) => setError(err.message))
+            .finally(() => setLoading(false));
+    }, [id]);
+
+    if (loading) return <Loader />;
+    if (error) return <p style={{ color: 'red', padding: '20px' }}>Ошибка: {error}</p>;
 
     if (!car) return <p>Машина не найдена</p>
 

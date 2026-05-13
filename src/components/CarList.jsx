@@ -1,9 +1,25 @@
+import { useState, useEffect } from 'react';
+import { getCars } from '../api/cars_api';
 import { carsMock } from "../data/carsData";
 import { FUEL_TYPES } from "../constants/car.constants";
 import CarCard from "./CarCard";
+import Loader from './Loader';
 import './CarCard.css'
 
 const CarsList = () => {
+    const [cars, setCars] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        getCars()
+            .then(setCars)
+            .catch((err) => setError(err.message))
+            .finally(() => setLoading(false));
+    }, []);
+
+    if (loading) return <Loader />;
+    if (error) return <p>Ошибка: {error}</p>;
     const groupedCars = Object.groupBy(carsMock, (car) => car.fuel);
 
     return (

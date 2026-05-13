@@ -1,6 +1,7 @@
 import './CarCard.css'
 import { useNavigate } from "react-router-dom";
 import { getFuelLabel, getTransmissionLabel } from "../constants/car.constants";
+import AddToCartButton from './AddToCartButton';
 
 function CarCard({ car }) {
     const navigate = useNavigate();
@@ -17,6 +18,7 @@ function CarCard({ car }) {
             <button onClick={() => navigate(`/cars/${car.id}`)}>
                 Перейти
             </button>
+            <AddToCartButton car={car} />
         </div>
     )
 }
